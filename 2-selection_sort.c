@@ -46,6 +46,6 @@ void selection_sort(int *array, size_t size)
 			t_min = array[i + 1];
 			m = i + 1;
 		}
-		i;
+		i++;
 	}
 }

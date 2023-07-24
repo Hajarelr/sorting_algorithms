@@ -8,18 +8,18 @@
  * Return: index of pivot
  */
 /**
- * swap - function that switch 2 element of an array
- * @x: element
- * @y: element
- * @array: array to sort
+ * swap - function to switch 2 elements
+ * @a: first lement
+ * @b: second element
+ * @array: array
  * @size: size of array
  */
 
-void swap(int *x, int *y, size_t size, int *array)
+void swap(int *a, int *b, size_t size, int *array)
 {
-	int tmp = *x;
-	*x = *y;
-	*y = tmp;
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
 	print_array(array, size);
 }
 

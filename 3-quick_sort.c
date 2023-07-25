@@ -1,5 +1,19 @@
 #include "sort.h"
 /**
+ * swap - function to switch 2 elements
+ * @a: first lement
+ * @b: second element
+ * @array: array
+ * @size: size of array
+ */
+void swap(int *a, int *b, size_t size, int *array)
+{
+int tmp = *a;
+*a = *b;
+*b = tmp;
+print_array(array, size);
+}
+/**
  * partition - function that calculates the index of the pivot
  * @array: array to sort
  * @s: the first element in the array
@@ -23,21 +37,6 @@ swap(&array[a], &array[b], size, array);
 if (array[e] != array[a + 1])
 swap(&array[a + 1], &array[e], size, array);
 return (a + 1);
-}
-/**
- * swap - function to switch 2 elements
- * @a: first lement
- * @b: second element
- * @array: array
- * @size: size of array
- */
-
-void swap(int *a, int *b, size_t size, int *array)
-{
-int tmp = *a;
-*a = *b;
-*b = tmp;
-print_array(array, size);
 }
 /**
  * sort - function that sorts an array of integers in
